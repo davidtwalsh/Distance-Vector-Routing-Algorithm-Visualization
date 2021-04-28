@@ -2,23 +2,48 @@ import pygame as pg
 from drawText import draw_textLeftToRight
 
 class distanceTableGUIObject:
-  def __init__(self,screen,x,y,ID):
-    print("init")
+  def __init__(self,screen,x,y,ID,node):
     self.screen = screen
     self.x = x
     self.y = y
     self.ID = ID
+    self.myNode = node
 
     self.fontNormal = pg.font.SysFont('Arial',32)
     self.colorBlack = (0,0,0)
+    self.colorBlue = (45,93,204)
     self.padding = 50
     self.width = 190
     self.height = 190
 
+
     self.distanceTable = [[1,2,9999,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
+    self.changeMatrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+
+  def resetChangeMatrix(self):
+    self.changeMatrix = [[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]]
+    
+  def setTable(self):
+    for row in range(0,4):
+      for col in range(0,4):
+        self.distanceTable[row][col] = self.myNode.distanceTable[row][col]
 
   def update(self):
-    pass
+    # if self.ID == 1:
+    #   isSame = True
+    #   for row in range(0,4):
+    #     for col in range(0,4):
+    #       if self.distanceTable[row][col] != self.myNode.distanceTable[row][col]:
+    #         isSame = False
+    #   if isSame == False:
+    #     print("change detected")
+    
+    # self.distanceTable = self.myNode.distanceTable
+    for row in range(0,4):
+      for col in range(0,4):
+        if self.distanceTable[row][col] != self.myNode.distanceTable[row][col]:
+          self.changeMatrix[row][col] = 1
+        self.distanceTable[row][col] = self.myNode.distanceTable[row][col]
 
   def draw(self):
     #draw id of obj for table (topLeft of x,y)
@@ -53,4 +78,16 @@ class distanceTableGUIObject:
         else:
           strVal = str(val)
         draw_textLeftToRight(strVal,self.fontNormal,self.colorBlack,self.screen,self.x+self.padding + self.padding * row,self.y+self.padding + self.padding * col)
+
+    #draw dist table changed values
+    for row in range(0,4):
+      for col in range(0,4):
+        val = self.distanceTable[col][row]
+        strVal = ""
+        if val == 9999:
+          strVal = "inf."
+        else:
+          strVal = str(val)
+        if self.changeMatrix[col][row] == 1:
+          draw_textLeftToRight(strVal,self.fontNormal,self.colorBlue,self.screen,self.x+self.padding + self.padding * row,self.y+self.padding + self.padding * col)
 
