@@ -1,7 +1,6 @@
 import pygame as pg
 from drawText import draw_text
 from drawText import draw_textLeftToRight
-from maths import getMidpoint
 from distanceTableGUI import distanceTableGUIObject
 
 from node0 import Node0
