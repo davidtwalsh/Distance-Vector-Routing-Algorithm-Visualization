@@ -267,7 +267,7 @@ while isProgramRunning:
 
   if hasStarted == False:
     pg.draw.rect(screen,colorButton,startButton)
-    draw_textLeftToRight("Start",fontNormal,colorWhite,screen,550,30)
+    draw_textLeftToRight("Start",fontNormal,colorWhite,screen,570,30)
   else:
     pass
 
@@ -364,8 +364,6 @@ while isProgramRunning:
   tempX,tempY = getMidpoint(bottomLeftCircleX + connectionOffset,bottomLeftCircleY,bottomRightCircleX-connectionOffset,bottomRightCircleY)
   draw_text("2",fontNormal,colorBlack,screen,tempX,tempY+18)
 
-  draw_textLeftToRight("The receiving node is highlighted in ",fontSmall,colorBlack,screen,420,500)
-  draw_textLeftToRight("BLUE",fontSmall,colorBlue,screen,730,500)
 
   #DONE DRAWING BASIC VISUAL
   #now draw distanceTableGUIObjects
