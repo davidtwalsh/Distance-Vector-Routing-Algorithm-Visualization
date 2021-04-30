@@ -1,11 +1,11 @@
 # Distance-Vector-Routing-Algorithm-Visualization
 
 ## About The Program
-This program serves to visualize what's going on during a distance vector routing algorithm between many connected nodes. The step-by-step visualizion, (mainGUI.py) allows the user to advance the algorithm at their own pace. Each time the advance button is pressed, the algorithm moves forward one step. Although it does a good job at visualizing each step of the algorithm, it doesn't do a good job at the highlighting the big picture because time is not simulated.
+This program serves to visualize what's going on during a distance vector routing algorithm between many connected nodes. The step-by-step visualizion, (mainGUI.py) allows the user to advance the algorithm at their own pace. Each time the advance button is pressed, the algorithm moves forward one step. Although it does a good job at visualizing each step of the algorithm, it doesn't do a good job at highlighting the big picture because time is not simulated.
 
-The real time visualization (mainGUITime.py) has basically the opposite effect of the step-by-step visualization. Although it does not do a good job at visualizing each step of the algorithm (because in reality many events are happening simultaneously), it does a great job at showing the big picture of the distance vector routing algorithm. Packets are simulated as colored circles moving along the links between the nodes in this simulation.
+The real time visualization (mainGUITime.py) has basically the opposite effect of the step-by-step visualization. Although it does not do a good job at visualizing each step of the algorithm (because in reality many events are happening simultaneously), it does a great job at showing the big picture of the distance vector routing algorithm. Packets are simulated as colored circles moving along the links between the nodes in this visualization.
 
-I hope that users can use both visualizations to get a better understanding of how the distance vector routing algorithm works. Please not that this python application requires pygame in order to run
+I hope that users can learn from both visualizations to get a better understanding of how the distance vector routing algorithm works. Please not that this python application requires pygame in order to run.
 
 The program is written entirely in Python 3.8.5 (other versions may work)
 Dependencies:
