@@ -12,9 +12,12 @@ Dependencies:
 * pygame v:1.9.6 (other versions may work)
 
 
+
 The step-by-step visualization
+
 ![GiftStepbyStep](https://user-images.githubusercontent.com/46041406/116754482-cc437300-a9d6-11eb-81ec-8e9a400c9b42.gif)
 
 
 The real-time visualization
-![Uploading GifTime.gif…]()
+
+![GifTime](https://user-images.githubusercontent.com/46041406/116754570-f301a980-a9d6-11eb-8446-b394fc8fb251.gif)
