@@ -13,3 +13,8 @@ Dependencies:
 
 
 The step-by-step visualization
+![GiftStepbyStep](https://user-images.githubusercontent.com/46041406/116754482-cc437300-a9d6-11eb-81ec-8e9a400c9b42.gif)
+
+
+The real-time visualization
+![Uploading GifTime.gif…]()
